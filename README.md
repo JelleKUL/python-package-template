@@ -130,6 +130,9 @@ The HTML code can be easily generated using the make file in the `docs/` directo
 ### Documentation hosting
 Github works with the github actions automation system. a yaml based instruction platform. You can enable the github pages in your project settings by selecting the `gh-pages` branch after the workflow has run at least once.
 
+>[!WARNING]
+> be sure to set read and write permissions to the bot in your settings
+
 Create a `.github/workflows/'name'.yml` file and 
 ```yml
 name: Docs
