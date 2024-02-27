@@ -41,7 +41,7 @@ autosummary_generate = True  # Turn on sphinx.ext.autosummary
 napoleon_google_docstring = False
 napoleon_use_param = False
 napoleon_use_ivar = True
-autodoc_mock_imports = config["options"]["install_requires"]
+autodoc_mock_imports = config["options"]["install_requires"].splitlines()
 autodoc_default_options = {
     'members': True,
     'member-order': 'bysource',
@@ -78,5 +78,7 @@ html_static_path = ['_static']
 # sphinx-apidoc -o . ..\geomapi\
 # ./make html
 
-# sphinx-apidoc -o ./docs/source/geomapi .\geomapi\ -e -t ./docs/source/_templates
+# Quickstart
+# pip install -r docs/docs_requirements.txt
+# sphinx-apidoc -o ./docs/source/#package .\#package\ -e -t ./docs/source/_templates
 # sphinx-build -b html docs/source/ docs/_build
